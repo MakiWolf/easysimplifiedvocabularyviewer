@@ -10,14 +10,14 @@ namespace viewer
     {
         [Key]
         public int ID { get; set; }
-        public string language1 { get; set; }
-        public string language2 { get; set; }
+        public string? language1 { get; set; }
+        public string? language2 { get; set; }
         public int mistakes { get; set; }
     }
 
     public class DatabaseManager
     {
-        public List<NAME> Getname(string l1, string l2)
+        public List<NAME>? Getname(string l1, string l2)
         {
 
             using (var connection = new SQLiteConnection(Program.t))
