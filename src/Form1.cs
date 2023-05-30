@@ -16,6 +16,7 @@ public partial class Form1 : Form
             dataGridView1.ReadOnly = true;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
+            textBoxsource.Text = "vocabulary.db";
             LoadData();
             textbox(false);
     }
@@ -135,7 +136,30 @@ public partial class Form1 : Form
             binding1 = new BindingSource();
             binding1.DataSource = databasemanager.GetData();
             dataGridView1.DataSource = binding1;
+            
         }
+
+    private void buttonsource_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+            string source = textBoxsource.Text;
+            if (File.Exists(source))
+            {
+                Program.t = "Data Source=" + source + ";Version=3;";
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("File does not exist");
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+    }
 		
 
 }

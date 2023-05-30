@@ -55,6 +55,7 @@ partial class Form1
             this.textBoxfilterlanguage2 = new System.Windows.Forms.TextBox();
             this.buttonfilter = new System.Windows.Forms.Button();
             this.buttonfilterdelete = new System.Windows.Forms.Button();
+            this.textBoxsource = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -247,6 +248,23 @@ partial class Form1
             this.buttonfilterdelete.Text = "delete filter";
             this.buttonfilterdelete.UseVisualStyleBackColor = true;
             this.buttonfilterdelete.Click += new System.EventHandler(this.buttonfilterdelete_Click);
+            //
+            // textBoxsource
+            // 
+            this.textBoxsource.Location = new System.Drawing.Point(492, 190);
+            this.textBoxsource.Name = "textBoxfilterlanguage1";
+            this.textBoxsource.Size = new System.Drawing.Size(100, 20);
+            this.textBoxsource.TabIndex = 19;          
+            // 
+            // buttonsource
+            // 
+            this.buttonfilterdelete.Location = new System.Drawing.Point(492, 220);
+            this.buttonfilterdelete.Name = "buttonsource";
+            this.buttonfilterdelete.Size = new System.Drawing.Size(100, 23);
+            this.buttonfilterdelete.TabIndex = 22;
+            this.buttonfilterdelete.Text = "change source";
+            this.buttonfilterdelete.UseVisualStyleBackColor = true;
+            this.buttonfilterdelete.Click += new System.EventHandler(this.buttonsource_Click);
             // 
             // Form1
             // 
@@ -275,6 +293,7 @@ partial class Form1
             this.Controls.Add(this.buttonsave);
             this.Controls.Add(this.textBoxlanguage1);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.textBoxsource);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -308,6 +327,7 @@ partial class Form1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBoxfilterlanguage1;
         private System.Windows.Forms.TextBox textBoxfilterlanguage2;
+        private System.Windows.Forms.TextBox textBoxsource;
         private System.Windows.Forms.Button buttonfilter;
         private System.Windows.Forms.Button buttonfilterdelete;
 }
