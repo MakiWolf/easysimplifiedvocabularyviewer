@@ -17,9 +17,25 @@ public partial class Form1 : Form
         dataGridView1.AllowUserToAddRows = false;
         dataGridView1.AllowUserToDeleteRows = false;
         textBoxsource.Text = "vocabulary.db";
-        LoadData();
         textbox(false);
+        try
+        {
+            if (File.Exists(Program.database))
+            {         
+                LoadData();
+            }
+            else
+            {
+                MessageBox.Show("db file does not exist!");
+            }
+        }
+
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.ToString());
+        }
     }
+    
 
     private void LoadData()
     {
@@ -145,6 +161,7 @@ public partial class Form1 : Form
         {
 
             string source = textBoxsource.Text;
+            Program.database = source;
             if (File.Exists(source))
             {
                 Program.t = "Data Source=" + source + ";Version=3;";

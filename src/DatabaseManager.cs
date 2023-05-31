@@ -37,13 +37,28 @@ namespace viewer
 
         public List<NAME> GetData()
         {
-
-            using (var connection = new SQLiteConnection(Program.t))
+            if (File.Exists(Program.database))
             {
-                var b = connection.Query<NAME>("select * from vocabulary").ToList();
-                connection.Close();
-                return b;
+                using (var connection = new SQLiteConnection(Program.t))
+                {
+                    try
+                    {
+                        var b = connection.Query<NAME>("select * from vocabulary").ToList();
+                        connection.Close();
+                        return b;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                        return null;
+                    }
+                }
             }
+            else
+            {
+                MessageBox.Show("db file does not exist!");
+            }
+            return null;
         }
 
     }

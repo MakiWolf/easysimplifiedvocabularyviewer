@@ -1,5 +1,5 @@
 /src/obj
 /src/bin
-src/vocabulary.db
+/src/vocabulary.db
 .vscode/launch.json
 .vscode/tasks.json

@@ -3,6 +3,7 @@ namespace viewer;
 static class Program
 {
     public static string t = "Data Source=vocabulary.db;Version=3;";
+     public static string database = "vocabulary.db";
     /// <summary>
     ///  The main entry point for the application.
     /// </summary>
