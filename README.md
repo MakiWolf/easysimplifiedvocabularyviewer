@@ -9,3 +9,6 @@ NOTE this is an ongoing project. There will be improvements in future.
 #### Build from source
 copy database file in src directory<br>
 open Terminal and enter `dotnet run` in src directory
+
+#### Contributing:
+We welcome contributions. This includes everything from simple bug reports to features. Please open a Issue first if you plan fundamental changes.
