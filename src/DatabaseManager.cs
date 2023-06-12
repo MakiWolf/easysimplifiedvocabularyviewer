@@ -19,20 +19,27 @@ namespace viewer
     {
         public List<NAME>? Getname(string l1, string l2)
         {
-
-            using (var connection = new SQLiteConnection(Program.t))
+            if (File.Exists(Program.database))
             {
-                try
+                using (var connection = new SQLiteConnection(Program.t))
                 {
-                    var b = connection.Query<NAME>("select * from vocabulary WHERE language1 = @l1 OR language2 = @l2", new { l1, l2 }).ToList();
-                    connection.Close();
-                    return b;
-                }
-                catch
-                {
-                    return null;
+                    try
+                    {
+                        var b = connection.Query<NAME>("select * from vocabulary WHERE language1 = @l1 OR language2 = @l2", new { l1, l2 }).ToList();
+                        connection.Close();
+                        return b;
+                    }
+                    catch
+                    {
+                        return null;
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("db file does not exist!");
+            }
+            return null;
         }
 
         public List<NAME> GetData()
