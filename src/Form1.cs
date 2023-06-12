@@ -21,7 +21,7 @@ public partial class Form1 : Form
         try
         {
             if (File.Exists(Program.database))
-            {         
+            {
                 LoadData();
             }
             else
@@ -35,7 +35,7 @@ public partial class Form1 : Form
             MessageBox.Show(ex.ToString());
         }
     }
-    
+
 
     private void LoadData()
     {
@@ -171,6 +171,22 @@ public partial class Form1 : Form
             {
                 MessageBox.Show("File does not exist");
             }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(ex.Message);
+        }
+    }
+
+    private void buttonabout_Click(object sender, EventArgs e)
+    {
+        try
+        {
+
+            Form2 Form2 = new Form2();
+            Form2.ShowDialog(); // Shows Form2
+            //this.Close();
+
         }
         catch (Exception ex)
         {

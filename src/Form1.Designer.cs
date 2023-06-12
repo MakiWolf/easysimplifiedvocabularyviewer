@@ -41,6 +41,7 @@ partial class Form1
         this.textBoxlanguage1_1 = new System.Windows.Forms.TextBox();
         this.textBoxlanguage2_1 = new System.Windows.Forms.TextBox();
         this.buttondelete = new System.Windows.Forms.Button();
+        this.buttonabout = new System.Windows.Forms.Button();
         this.textBoxmistakes = new System.Windows.Forms.TextBox();
         this.textBoxmistakes1 = new System.Windows.Forms.TextBox();
         this.label1 = new System.Windows.Forms.Label();
@@ -266,6 +267,16 @@ partial class Form1
         this.buttonfilterdelete.UseVisualStyleBackColor = true;
         this.buttonfilterdelete.Click += new System.EventHandler(this.buttonsource_Click);
         // 
+        // buttonabout
+        // 
+        this.buttonabout.Location = new System.Drawing.Point(492, 250);
+        this.buttonabout.Name = "buttonabout";
+        this.buttonabout.Size = new System.Drawing.Size(100, 23);
+        this.buttonabout.TabIndex = 22;
+        this.buttonabout.Text = "about";
+        this.buttonabout.UseVisualStyleBackColor = true;
+        this.buttonabout.Click += new System.EventHandler(this.buttonabout_Click);
+        // 
         // Form1
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,6 +300,7 @@ partial class Form1
         this.Controls.Add(this.textBoxlanguage2_1);
         this.Controls.Add(this.textBoxlanguage1_1);
         this.Controls.Add(this.buttoncreate);
+        this.Controls.Add(this.buttonabout);
         this.Controls.Add(this.textBoxlanguage2);
         this.Controls.Add(this.buttonsave);
         this.Controls.Add(this.textBoxlanguage1);
@@ -315,6 +327,7 @@ partial class Form1
     private System.Windows.Forms.TextBox textBoxlanguage1_1;
     private System.Windows.Forms.TextBox textBoxlanguage2_1;
     private System.Windows.Forms.Button buttondelete;
+    private System.Windows.Forms.Button buttonabout;
     private System.Windows.Forms.TextBox textBoxmistakes;
     private System.Windows.Forms.TextBox textBoxmistakes1;
     private System.Windows.Forms.Label label1;
