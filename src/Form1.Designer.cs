@@ -31,7 +31,7 @@ partial class Form1
         this.components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.ClientSize = new System.Drawing.Size(800, 450);
-        this.Text = "Form1";
+        this.Text = "easysimplifiedvocabularyviewer";
 
         this.dataGridView1 = new System.Windows.Forms.DataGridView();
         this.textBoxlanguage1 = new System.Windows.Forms.TextBox();
@@ -307,7 +307,6 @@ partial class Form1
         this.Controls.Add(this.dataGridView1);
         this.Controls.Add(this.textBoxsource);
         this.Name = "Form1";
-        this.Text = "Form1";
         ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
         this.ResumeLayout(false);
         this.PerformLayout();

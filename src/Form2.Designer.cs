@@ -35,6 +35,7 @@ partial class Form2
 
         this.label1 = new System.Windows.Forms.Label();
         this.label2 = new System.Windows.Forms.Label();
+        this.label3 = new System.Windows.Forms.Label();
         
         this.SuspendLayout();
 
@@ -52,19 +53,22 @@ partial class Form2
         // label2
         // 
         this.label2.AutoSize = true;
-        this.label2.Location = new System.Drawing.Point(0, 40);
+        this.label2.Location = new System.Drawing.Point(0, 90);
         this.label2.Name = "label2";
         this.label2.Size = new System.Drawing.Size(52, 13);
         this.label2.TabIndex = 11;
-        this.label2.Text = "version: 0.1";
+        // 
+        // label3
+        // 
+        this.label3.AutoSize = true;
+        this.label3.Location = new System.Drawing.Point(0, 40);
+        this.label3.Name = "label3";
+        this.label3.Size = new System.Drawing.Size(52, 13);
+        this.label3.TabIndex = 11;
         //Form2
-        //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-        //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        //this.ClientSize = new System.Drawing.Size(925, 537);
         this.Controls.Add(this.label1);
         this.Controls.Add(this.label2);
-        //this.Name = "Form2";
-        //this.Text = "Form2";
+        this.Controls.Add(this.label3);
        
         this.ResumeLayout(false);
         this.PerformLayout();
@@ -75,4 +79,5 @@ partial class Form2
 
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.Label label3;
 }

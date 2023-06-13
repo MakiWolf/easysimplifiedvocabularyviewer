@@ -42,7 +42,7 @@ namespace viewer
             return null;
         }
 
-        public List<NAME> GetData()
+        public List<NAME>? GetData()
         {
             if (File.Exists(Program.database))
             {
